@@ -23,6 +23,9 @@ while game_is_on:
     car_manager.create_car()
     car_manager.move_cars()
 
+    if scoreboard.level > 3:
+        car_manager.create_car_hell_mode()
+
     #Detect collision with car
     for car in car_manager.all_cars:
         if car.distance(player) < 20:
